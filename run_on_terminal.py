@@ -18,8 +18,10 @@ weights2 = model_data["weights2"]
 bias1 = model_data["bias1"]
 bias2 = model_data["bias2"]
 
+print("Loading word file...")
 # Load your word embedding model
 model = api.load("word2vec-google-news-300")
+print("Word file loaded successfully...")
 
 def softmax(x):
     exp_x = np.exp(x - np.max(x))
@@ -60,15 +62,10 @@ def predict(word):
     else:
         return "positive"
 
-# Streamlit app interface
-st.title("Word Sentiment Prediction")
+ans = ""
 
-# Input form
-word = st.text_input("Enter a word")
-
-if st.button("Predict"):
-    sentiment = predict(word)
-    if sentiment:
-        st.write(f"The word '{word}' is a {sentiment} word.")
-    else:
-        st.write(f"The word '{word}' is not in the vocabulary.")
+while ans != "n":
+    s = input("Enter word to check for: ")
+    pr = predict(s)
+    print(f'The word {s} is {pr}')
+    ans = input("Enter more(y/n): ")
