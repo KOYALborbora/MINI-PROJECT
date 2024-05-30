@@ -1,0 +1,100 @@
+/* App.css */
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.App-header >nav>ul
+{
+  top: 0;
+  right: 0;
+  margin-right: 3rem;
+  position: absolute;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  font-size: 1.5rem;
+  font-family: 'sans-serif';
+}
+
+.box-container {
+  width: 300px; /* Adjust width as needed */
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+/* WordInput.css */
+.word-input-container {
+  padding: 20px;
+}
+
+.word-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.word-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.predict-button, .reset-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.predict-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.reset-button {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.loading-message {
+  margin-top: 10px;
+  color: #007bff;
+}
+
+.prediction-box {
+  margin-top: 20px;
+}
+
+.result-field {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 100%; /* Adjust width as needed */
+  text-align: center;
+}
+
+/* IntroductionBox.css */
+.introduction-box {
+  padding: 20px;
+}
